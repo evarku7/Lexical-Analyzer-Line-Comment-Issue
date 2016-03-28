@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+enum Token_Type { 
+
+					INTEGER, CHAR, STRING, COMMENT, IDENTIFIER, END_FILE, LINE_COMMENT,
+
+					PROGRAM, VAR, CONST, TYPE, FUNCTION, RETURN, BEGIN, END,
+					OUTPUT, IF, ELSE, THEN, WHILE, DO, CASE, OF, OTHERWISE,
+					REPEAT, FOR, UNTIL, LOOP, POOL, EXIT, MOD, AND, OR, NOT, 
+					READ, SUCC, PRED, CHR, _EOF_,
+
+					T_PLUS, T_MINUS, T_MULTIPLY, T_DIVIDE, T_COMMA, T_SEMI_COLON,
+					T_CLOSE_PARENTHESIS, T_OPEN_PARENTHESIS, T_EQUALS,
+
+					T_SWAP, T_ASSIGNMENT, T_DOT_CASE, T_LESS_EQUAL, T_NOT_EQUAL,
+					T_LESS, T_GREATER, T_GREATER_EQUAL, T_PERIOD, T_COLON
+
+};
+
+struct Token {
+	Token_Type type;
+	string value;
+};
